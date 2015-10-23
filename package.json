@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sleuthg/express-route-viewer/issues"
   },
-  "homepage": "https://github.com/sleuthg/express-route-viewer"
+  "homepage": "https://github.com/sleuthg/express-route-viewer",
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
 }
