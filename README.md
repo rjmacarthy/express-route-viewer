@@ -9,11 +9,8 @@ npm install express-route-viewer
 ## Example
 
 ```
+routeViewer = require('express-route-viewer');
 var app = express();
-```
-
-Add routes to the Express app
-
-```
+app.get('/api/test', function(req,res) { res.send('Howdy'); };
 routeViewer(app);
 ```
