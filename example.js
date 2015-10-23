@@ -1,9 +1,5 @@
+routeViewer = require('./index.js');
 var app = require('express')();
-var routeView = require('./index.js');
-
-app.get('/api/me', function(req,res) {
-  res.send('Thank you for trying');
-});
-
-routeView(app);
+app.get('/api/test', function(req,res) { res.send('Howdy'); });
+routeViewer(app);
 

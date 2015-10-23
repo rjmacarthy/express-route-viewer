@@ -11,6 +11,6 @@ npm install express-route-viewer
 ```
 routeViewer = require('express-route-viewer');
 var app = require('express')();
-app.get('/api/test', function(req,res) { res.send('Howdy'); };
+app.get('/api/test', function(req,res) { res.send('Howdy'); });
 routeViewer(app);
 ```
