@@ -8,10 +8,20 @@ module.exports = function(app) {
 };
 
 function printStack(stack,prepend) {
+  var something = false;
   for (var i=0; i<stack.length; i++) {
-    printRoute(stack[i].route,prepend);
-    printMethod(stack[i].method,prepend);
+    //console.log(stack[i]);
+    var S = stack[i];
+    if (S.route) {
+      printRoute(S.route,prepend);
+      something = true;
+    }
+    if (S.method) {
+      printMethod(S,prepend);
+      something = true;
+    }
   }
+  if (something) console.log();
 }
 
 function printRoute(route,prepend) {
@@ -20,13 +30,12 @@ function printRoute(route,prepend) {
       console.log(prepend + route.path);
     }
     if (route.stack) {
-      printStack(route.stack,prepend+'-- ');
+      printStack(route.stack,prepend+'  -- ');
     }
   }
 }
 
-function printMethod(method,prepend) {
-  if (method) {
-    console.log(prepend + method);
-  }
+function printMethod(M,prepend) {
+  var str = prepend + M.method + ' (' + M.name + ')';
+  console.log(str);
 }
