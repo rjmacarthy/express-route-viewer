@@ -14,3 +14,10 @@ var app = require('express')();
 app.get('/api/test', function(req,res) { res.send('Howdy'); });
 routeViewer(app);
 ```
+
+Logs to the console...
+
+```
+/api/test
+-- get
+```
