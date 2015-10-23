@@ -6,11 +6,11 @@ Displays the routes of an ExpressJS app in a nice human-readable format.
 npm install express-route-viewer
 ```
 
-## Example
+## Basic Example
 
 ```
 routeViewer = require('express-route-viewer');
-var app = express();
+var app = require('express')();
 app.get('/api/test', function(req,res) { res.send('Howdy'); };
 routeViewer(app);
 ```
