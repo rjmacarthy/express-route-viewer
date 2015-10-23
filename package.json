@@ -1,6 +1,6 @@
 {
   "name": "express-route-viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Displays the routes of an ExpressJS app in a nice human-readable format.",
   "main": "index.js",
   "scripts": {
