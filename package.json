@@ -1,26 +1,23 @@
 {
-  "name": "express-route-viewer",
-  "version": "0.0.3",
-  "description": "Displays the routes of an ExpressJS app in a nice human-readable format.",
+  "name": "express-routes-viewer",
+  "version": "0.0.1",
+  "description": "Returns an array express routes in object format",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "jasmine-node spec/route-viewer-spec.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sleuthg/express-route-viewer.git"
+    "url": "https://github.com/rjmacarthy/express-route-viewer.git"
   },
   "keywords": [
     "expressjs",
     "route"
   ],
-  "author": "Trevor Gile",
+  "author": "Richard Macarthy",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sleuthg/express-route-viewer/issues"
-  },
-  "homepage": "https://github.com/sleuthg/express-route-viewer",
-  "devDependencies": {
-    "express": "^4.13.3"
+  "homepage": "https://github.com/rjmacarthy/express-route-viewer",
+  "dependencies": {
+    "lodash": "^3.10.1"
   }
 }

@@ -1,23 +1,11 @@
 # express-route-viewer
-Displays the routes of an ExpressJS app in a nice human-readable format.
-
-## Install
-```
-npm install express-route-viewer
-```
+Gather express routes in an express app, forked from [express-route-viewer](https://github.com/sleuthg/express-route-viewer).
 
 ## Basic Example
 
 ```
-routeViewer = require('express-route-viewer');
-var app = require('express')();
-app.get('/api/test', function(req,res) { res.send('Howdy'); });
-routeViewer(app);
+getRoutes(app, function(routes) { // app is your express app object
+    //routes
+});
 ```
 
-Logs to the console...
-
-```
-/api/test
--- get
-```

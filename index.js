@@ -1,41 +1,18 @@
-/**
- * @arg app Express application object
- */
+var _ = require('lodash');
 
-module.exports = function(app) {
-  var stack = app._router.stack;
-  printStack(stack,'');
+module.exports = function(app, cb) {
+    var stack = app._router.stack;
+    gatherRoutes(stack, cb);
 };
 
-function printStack(stack,prepend) {
-  var something = false;
-  for (var i=0; i<stack.length; i++) {
-    //console.log(stack[i]);
-    var S = stack[i];
-    if (S.route) {
-      printRoute(S.route,prepend);
-      something = true;
-    }
-    if (S.method) {
-      printMethod(S,prepend);
-      something = true;
-    }
-  }
-  if (something) console.log();
-}
-
-function printRoute(route,prepend) {
-  if (route) {
-    if (route.path) {
-      console.log(prepend + route.path);
-    }
-    if (route.stack) {
-      printStack(route.stack,prepend+'  -- ');
-    }
-  }
-}
-
-function printMethod(M,prepend) {
-  var str = prepend + M.method + ' (' + M.name + ')';
-  console.log(str);
+function gatherRoutes(stack, cb) {
+    var routes = _.map(stack, function(s) {
+        if (s.route && s.route.path && s.route.methods) {
+            return {
+                path: s.route.path,
+                methods: s.route.methods
+            };
+        }
+    });
+    cb(_.filter(routes));
 }
