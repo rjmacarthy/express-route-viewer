@@ -1,7 +1,7 @@
 var getRoutes = require('../harness.js').getRoutes;
 var app = require('../harness.js').app;
 
-xdescribe('routes test suite', function() {
+describe('routes test suite', function() {
     it('should be able to get routes', function() {
         getRoutes(app, function(routes) {
             expect(routes).toBeDefined();
