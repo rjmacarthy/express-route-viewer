@@ -1,7 +1,9 @@
 sudo: false
 language: node_js
 before_script:
-  - npm i -g jasmine-node express lodash
+  - npm i -g jasmine-node 
+  - npm install express 
+  - npm install lodash
 matrix:
   include:
   - node_js: 4.4
