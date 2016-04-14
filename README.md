@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rjmacarthy/express-route-viewer.svg?branch=master)](https://travis-ci.org/rjmacarthy/express-route-viewer)
+
 # express-routes-viewer
 
 Gather express routes in an express app, forked from [express-route-viewer](https://github.com/sleuthg/express-route-viewer).
