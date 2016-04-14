@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rjmacarthy/express-route-viewer.svg?branch=trav)](https://travis-ci.org/rjmacarthy/express-route-viewer)
+[![Build Status](https://travis-ci.org/rjmacarthy/express-route-viewer.svg?branch=master)](https://travis-ci.org/rjmacarthy/express-route-viewer)
 
 # express-routes-viewer
 
